@@ -1,4 +1,4 @@
-Employee Management App
+Veterinary Appointment App
 ========================
 
 ## Installation Instructions:
