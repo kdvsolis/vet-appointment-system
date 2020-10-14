@@ -1,0 +1,12 @@
+<div *ngIf="!isLoaded">
+    Loading...
+</div>
+<div *ngIf="isLoaded">
+    <app-table [tableData]="tableData" 
+               [tableColumns]="tableCols" 
+               [dialogTitle]="dialogTitle"
+               [patientId]="patientId"
+               [addData]="addData"
+               [editData]="editData"
+               [removeData]="deleteData" ></app-table>
+</div>

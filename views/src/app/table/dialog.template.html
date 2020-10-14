@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>{{ data.title }}</h1>
+<div mat-dialog-content>
+  <p>{{ data.title }}</p>
+  <mat-label></mat-label>
+  <div *ngFor="let item of data.information | keyvalue;  trackBy:trackByFn">
+    <div *ngIf="item.key != '_id' && item.key != 'modify'; then displayField"></div>
+      <ng-template #displayField >
+        <mat-form-field>
+            <mat-label>{{item.key}}</mat-label>
+            <input matInput [(ngModel)]="data.information[item.key]" value="" >
+        </mat-form-field>
+      </ng-template>
+    </div>
+</div>
+<div mat-dialog-actions >
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data.information" cdkFocusInitial>Ok</button>
+</div>
