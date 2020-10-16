@@ -9,7 +9,7 @@ import { ApiServices } from '../../services/api.services'
 })
 export class PetAppointmentComponent implements OnInit {
   dialogTitle = 'Appointment Information';
-  tableCols = ['start_time', 'end_time', 'description', 'fee'];
+  tableCols = ['start_time', 'end_time', 'description', 'fee', 'is_paid'];
   tableData: any = [];
   patientId: string;
   isLoaded: boolean = false;
